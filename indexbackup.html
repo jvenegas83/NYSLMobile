@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" sizes="196x196" href="assets/images/nysl_logo.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="/assets/stylesheets/style.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<div class="header">
+	</div>
+	<nav class="navbar navbar-inverse">
+		<div class="row" id="bottomNav">
+			
+			<div class="col-xs-8">
+				<h1>NYSL SOCCER LEAGUE</h1>
+			</div>
+			<div class="col-xs-2"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+		</div>
+
+
+	</nav>
+	
+	<div class="container">
+
+
+
+		<div class="list-group">
+			<a href="gameinfo.html" class="list-group-item list-group-item-action flex-column align-items-start">
+				<h1> GAME INFORMATION</h1>
+			</a>
+			<a href="locations.html" class="list-group-item list-group-item-action flex-column align-items-start">
+				<h1> GAME LOCATIONS </h1>
+			</a>
+			<a href="chat.html" class="list-group-item list-group-item-action flex-column align-items-start">
+				<h1> CHAT INFORMATION</h1>
+			</a>
+		</div>
+
+<!--
+		<div class=row_index>
+			<div class="card-block">
+				<a href="gameinfo.html"><h1> GAME INFORMATION</h1></a>
+			</div>
+			<div class="card-block">
+				<h1> GAME LOCATIONS</h1>
+			</div>
+			<div class="card-block">
+				<h1> CHAT INFORMATION</h1>
+			</div>
+		</div>
+		
+-->
+
+	</div>
+	<nav class="navbar navbar-inverse navbar-fixed-bottom">
+		<div class="row" id="bottomNav">
+			<div class="col-xs-4 text-center"><a href="index.html"><i class="glyphicon glyphicon-home"></i><br>Home</a></div>
+			<div class="col-xs-4 text-center"><a href="locations.html"><i class="glyphicon glyphicon-map-marker"></i><br>Locations</a></div>
+			<div class="col-xs-4 text-center"><a href="chat.html"><i class="glyphicon glyphicon-comment"></i><br>Chat</a></div>
+			<div class="col-xs-4 text-center"><a href="#"><i class="glyphicon glyphicon-envelope"></i><br>Contact</a></div>
+		</div>
+
+	</nav>
+
+	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyByBZ6hNpDJMYg0BR6-TEclpqE_Z9uC48c",
+			authDomain: "nysl-mobile-9aa20.firebaseapp.com",
+			databaseURL: "https://nysl-mobile-9aa20.firebaseio.com",
+			projectId: "nysl-mobile-9aa20",
+			storageBucket: "",
+			messagingSenderId: "601801689016"
+		};
+		firebase.initializeApp(config);
+	</script>
+</body>
+
+</html>

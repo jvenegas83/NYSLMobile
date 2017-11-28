@@ -1,0 +1,254 @@
+.header {
+	background-image: url("/assets/images/descarga.jpg");
+	height: 480px;
+	background-size: cover;
+}
+
+.footer-bottom {
+	background-color: #182118;
+	padding-top: 5px;
+	height: 100px;
+	text-align: center;
+	color: #CCC;
+	margin-top: 10px;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+
+}
+
+.navbar-inverse {
+	background-color: grey;
+}
+
+.row_header {
+	background-color: #182118;
+	height: 40px;
+	text-align: center;
+	color: #CCC;
+	margin-bottom: 40px;
+	font-size: 18px;
+}
+
+.menu_header {
+	background-color: #182118;
+	padding-top: 10px;
+	height: 100px;
+	padding-left: 20px;
+	color: #CCC;
+	font-size: 30px;
+
+}
+
+.row {
+	height: 150px;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.row_logo {
+	height: 20vh;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-chat {
+
+	margin: 0 auto;
+	width: 750px;
+	background: #444753;
+	border-radius: 5px;
+
+}
+
+.chat .chat-message .fa-file-o,
+.chat .chat-message .fa-file-image-o {
+	font-size: 16px;
+	color: gray;
+	cursor: pointer;
+}
+
+button {
+	float: right;
+	color: #94C2ED;
+	font-size: 16px;
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: #F2F5F8;
+
+	&:hover {
+		color: darken(#94C2ED, 7%);
+	}
+}
+
+body {
+	height: 100vh;
+	/*	background-image: url("/assets/images/background.jpg");*/
+	background: rgb(228, 239, 192);
+	/* Old browsers */
+	background: -moz-linear-gradient(top, rgba(228, 239, 192, 1) 1%, rgba(155, 152, 110, 1) 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(228, 239, 192, 1) 1%, rgba(155, 152, 110, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(228, 239, 192, 1) 1%, rgba(155, 152, 110, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4efc0', endColorstr='#9b986e', GradientType=0);
+}
+
+li {
+	margin-right: 60px;
+}
+
+textarea {
+	width: 100%;
+	border: none;
+	padding: 10px 20px;
+	font: 14px/22px "Lato", Arial, sans-serif;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	resize: none;
+
+}
+
+
+h1,
+h2 {
+	color: white;
+	text-align: center;
+}
+
+
+.container {
+	height: auto;
+}
+
+.list-group-item {
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	margin-bottom: -1px;
+	background-color: #333;
+	border: 1px solid #f5f5f5;
+}
+
+.title {
+
+	margin-left: 100px;
+	padding-top: 9px;
+	margin-right: 0;
+
+}
+
+.single {
+	padding: 30px 15px;
+	margin-top: 40px;
+	background: #fcfcfc;
+	border: 1px solid #f0f0f0;
+}
+
+a.list-group-item:focus,
+a.list-group-item:hover,
+button.list-group-item:focus,
+button.list-group-item:hover {
+	background-color: black;
+}
+
+.container-fluid-bottom {
+	display: flex;
+	justify-content: center;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.container-game-info {
+
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+
+.btn-block {
+	width: 70%;
+	height: 90%;
+}
+
+.img_logo {
+	width: 300px;
+	height: 300px;
+}
+
+.team-logo {
+	width: 150px;
+	height: 150px;
+}
+
+.col-xs-6 {
+	text-align: center;
+	padding-left: 70px;
+}
+
+.card-block {
+	height: 200px;
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	margin-bottom: -1px;
+	background-color: grey;
+	border: 1px solid #f5f5f5;
+}
+
+.card-header {
+	text-align: left;
+}
+
+.col-sm-4 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.col-sm-4 {
+	text-align: center;
+}
+
+.day {
+	display: block;
+	font-size: 50pt;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.time {
+	display: block;
+	font-size: 29pt;
+	font-weight: 400;
+	line-height: 1;
+}
+
+
+.location {
+	display: block;
+	font-size: 20pt;
+	font-weight: 400;
+	line-height: 1;
+}
+
+
+.col-sm-8 {
+	display: inline-block;
+	width: 100%;
+	color: rgb(255, 255, 255);
+	padding: 5px;
+	text-align: center;
+	text-transform: uppercase;
+}

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--	<meta name="mobile-web-app-capable" content="yes">-->
+	<title>NYSL</title>
+	<link rel="shortcut icon" sizes="100x100" href="assets/images/nysl_logo.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/stylesheets/style.css">
+
+</head>
+
+<body>
+	<div class="login-page" id="login-page" style="display: none">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+
+				<div class="flip">
+					<div class="card">
+						<div class="face front">
+							<div class="panel panel-default">
+								<div class="form-horizontal">
+									<br>
+									<div class="row_logo">
+										<img src="assets/images/nysl_logo.png" class="img-login">
+									</div>
+									<br>
+									<input class="form-control" placeholder="Email" id="Username" />
+									<input type="password" class="form-control" placeholder="Password" id="Password"/>
+									<p class="text-right"><a href="#" class="logout"><i class="glyphicon glyphicon-log-out"></i>Logout</a></p>
+									<button class="btn btn-primary btn-block" id="loginEmail">LOG IN</button>
+									<hr>
+									<p class="white-left">Sign in with</p>
+									<p>
+										<i class="fa fa-google-plus-square fa-lg red" id="google"></i>
+										<i class="fa fa-facebook-square fa-lg white" id="facebook"></i>
+									</p>
+									<!--											<i class="fa fa-twitter fa-lg"></i></p>-->
+									<div class="row">
+										<span class="parpadea pull-right" id="login-error"></span>
+									</div>
+									<hr>
+									
+									<p class="text-center">
+										<a href="#" class="fliper-btn">Create new account?</a>
+									</p>
+								</div>
+							</div>
+							
+						</div>
+						<div class="face back">
+							<div class="panel panel-default">
+								<div class="form-horizontal">
+									<div class="row_logo">
+										<img src="assets/images/nysl_logo.png" class="img-login">
+									</div>
+									<label class="white">Basic Information</label>
+									<input class="form-control" placeholder="Username" id="new-username"/>
+									<input class="form-control" placeholder="Email" id="new-email"/>
+									<hr>
+									<label class="white">Private Information</label>
+									<input type="password" class="form-control" placeholder="Password" id="new-password"/>
+									<div class="row">
+										<span class="parpadea pull-right" id="newuser-mess"></span>
+									</div>
+									<hr>
+									<button class="btn btn-primary btn-block" id="newUser">SIGN UP</button>
+									<p class="text-center">
+										<a href="#" class="fliper-btn">Already have an account?</a>
+									</p>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4"></div>
+
+		</div>
+
+	</div>
+	<div class="main-page" id="main-page" style="display: none">
+		<div class="header">
+		</div>
+		<nav class="navbar navbar-inverse">
+			<div class="row" id="bottomNav">
+				<div class="col-xs-8">
+					<p class="white">NYSL SOCCER LEAGUE</p>
+				</div>
+				<div class="col-xs-2"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+			</div>
+		</nav>
+		<div class="container" id="container-main-page">
+
+			<div class="list-group">
+				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start" data-rel="game-info">
+					<p class="white"> GAME INFORMATION</p>
+				</a>
+				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start" data-rel="locations">
+					<p class="white"> GAME LOCATIONS </p>
+				</a>
+				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start" data-rel="chat">
+					<p class="white"> CHAT INFORMATION</p>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="game-info" id="game-info" style="display: none">
+		<nav class="navbar navbar-inverse">
+			<div class="row" id="bottomNav">
+				<div class="col-xs-2 text-center"><span><a href="#"  href="#" data-rel="main-page" class="link-bottom"><i class="glyphicon glyphicon-chevron-left"></i><br>Back</a></span></div>
+				<div class="col-xs-8 text-center">
+					<p class="white">GAME INFORMATION</p>
+				</div>
+				<div class="col-xs-2 text-center"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+			</div>
+		</nav>
+		<div class="container-game-info" id="container-game-info-11">
+
+			<div class="row_logo">
+				<a href="index.html"><img src="assets/images/nysl_logo.png" class="img_logo"></a>
+			</div>
+			<div class="row" id="monthNav">
+				<div class="col-xs-2 text-center"><span><a href="#" id="previous-month" ><i class="glyphicon glyphicon-chevron-left"></i><br>Previous</a></span></div>
+				<div class="col-xs-8 text-center">
+					<p id="month" class="white">
+						<p>
+				</div>
+				<div class="col-xs-2 text-center"><span class="pull-right"><a href="#" id="next-month" ><i class="glyphicon glyphicon-chevron-right"></i><br>Next</a></span></div>
+			</div>
+
+			<div class="card" id="card">		
+			</div>
+		</div>
+		
+	</div>
+	<div class="locations" id="locations" style="display: none">
+		<nav class="navbar navbar-inverse">
+			<div class="row" id="bottomNav">
+				<div class="col-xs-2 text-center"><span><a href="#" data-rel="main-page" class="link-bottom"><i class="glyphicon glyphicon-chevron-left"></i><br>Back</a></span></div>
+				<div class="col-xs-8">
+					<p class="white">LOCATIONS</p>
+				</div>
+				<div class="col-xs-2"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+			</div>
+		</nav>
+		<div class="container" id="container-locations">
+
+			<div class="row_logo">
+				<a href="#"><img src="assets/images/nysl_logo.png" class="img_logo"></a>
+			</div>
+			<div class="list-group">
+				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start" data-rel="aj">
+					<p class="white"> AJ KATZENMAIER ELEMENTARY</p>
+				</a>
+				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start" data-rel="greenbay">
+					<p class="white"> GREENBAY ELEMENTARY </p>
+				</a>
+				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start" data-rel="howard">
+					<p class="white"> HOWARD A YEAGER ELEMENTARY</p>
+				</a>
+				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start" data-rel="marjorie">
+					<p class="white"> MARJORIE P HART ELEMENTARY</p>
+				</a>
+				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start" data-rel="north">
+					<p class="white"> NORTH ELEMENTARY</p>
+				</a>
+				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start" data-rel="south">
+					<p class="white"> SOUTH ELEMENTARY</p>
+				</a>
+			</div>
+
+		</div>
+
+	</div>
+	<div class="chat" id="chat" style="display: none">
+		<nav class="navbar navbar-inverse">
+			<div class="row" id="bottomNav">
+				<div class="col-xs-2 text-center">
+					<span>
+						<a href="#" class="logout"><i class="glyphicon glyphicon-log-out"></i><br>Logout</a>
+					</span>
+				</div>
+				<div class="col-xs-8">
+					<p class="white">CHAT INFORMATION</p>
+				</div>
+				<div class="col-xs-2"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+			</div>
+		</nav>
+
+		<div class="container" id="container-chat">
+			<div class="row_logo">
+				<img src="assets/images/nysl_logo.png" class="img_logo">
+			</div>
+			<div class="form-group">
+				<div class="panel-heading top-bar">
+                   <div class="col-xs-2">
+					   <span class="glyphicon glyphicon-comment"></span>
+                	</div>
+					<div class="col-xs-8">
+						<span class="white" id="chat-user"></span>
+					</div>
+					
+                </div>
+				<div id="chat-area">
+
+				</div>
+				<div class="input-group">
+                    <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here..." />
+                     <span class="input-group-btn">
+                        <button class="btn-primary btn-sm" id="btn-chat">
+							<i class="fa fa-send fa-1x" aria-hidden="true"></i>
+						 </button>
+                     </span>
+                </div>
+			</div>
+		</div>
+	</div>
+	<div class="container-maps" id="aj" style="display: none">
+
+		<nav class="navbar navbar-inverse">
+			<div class="row" id="bottomNav">
+				<div class="col-xs-2 text-center"><span><a href="#" data-rel="locations" class="link-bottom"><i class="glyphicon glyphicon-chevron-left"></i><br>Back</a></span></div>
+				<div class="col-xs-8">
+					<p class="white">MAPS</p>
+				</div>
+				<div class="col-xs-2"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+			</div>
+
+
+		</nav>
+		<div class="container-map-detail">
+			<div class="row_logo">
+				<img src="assets/images/nysl_logo.png" class="img_logo">
+			</div>
+			<div class="row">
+
+				<h3>AJ KATZENMAIER ELEMENTARY</h3>
+
+			</div>
+			<div class="iframe">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.6566507586276!2d-87.63126038513442!3d41.90024067200844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1507557793415" allowfullscreen>
+			</iframe>
+			</div>
+
+		</div>
+	</div>
+	<div class="container-maps" id="greenbay" style="display: none">
+
+		<nav class="navbar navbar-inverse">
+			<div class="row" id="bottomNav">
+				<div class="col-xs-2 text-center"><span><a href="#" data-rel="locations" class="link-bottom"><i class="glyphicon glyphicon-chevron-left"></i><br>Back</a></span></div>
+				<div class="col-xs-8">
+					<p class="white">MAPS</p>
+				</div>
+				<div class="col-xs-2"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+			</div>
+
+
+		</nav>
+		<div class="container-map-detail">
+			<div class="row_logo">
+				<img src="assets/images/nysl_logo.png" class="img_logo">
+			</div>
+			<div class="row">
+
+				<h3>GREENBAY ELEMENTARY</h3>
+
+			</div>
+			<div class="iframe">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0250102181503!2d-87.64023168513395!3d41.9138210711581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1507557950731" allowfullscreen></iframe>
+			</div>
+
+		</div>
+	</div>
+	<div class="container-maps" id="howard" style="display: none">
+
+		<nav class="navbar navbar-inverse">
+			<div class="row" id="bottomNav">
+				<div class="col-xs-2 text-center"><span><a href="#" data-rel="locations" class="link-bottom"><i class="glyphicon glyphicon-chevron-left"></i><br>Back</a></span></div>
+				<div class="col-xs-8">
+					<p class="white">MAPS</p>
+				</div>
+				<div class="col-xs-2"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+			</div>
+
+
+		</nav>
+		<div class="container-map-detail">
+			<div class="row_logo">
+				<img src="assets/images/nysl_logo.png" class="img_logo">
+			</div>
+			<div class="row">
+
+				<h3>HOWARD A YEAGER ELEMENTARY</h3>
+
+			</div>
+			<div class="iframe">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.58549738468!2d-87.66511458513358!3d41.92326857056624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1507557982666" allowfullscreen></iframe>
+			</div>
+
+		</div>
+	</div>
+	<div class="container-maps" id="marjorie" style="display: none">
+
+		<nav class="navbar navbar-inverse">
+			<div class="row" id="bottomNav">
+				<div class="col-xs-2 text-center"><span><a href="#" data-rel="locations" class="link-bottom"><i class="glyphicon glyphicon-chevron-left"></i><br>Back</a></span></div>
+				<div class="col-xs-8">
+					<p class="white">MAPS</p>
+				</div>
+				<div class="col-xs-2"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+			</div>
+
+
+		</nav>
+		<div class="container-map-detail">
+			<div class="row_logo">
+				<img src="assets/images/nysl_logo.png" class="img_logo">
+			</div>
+			<div class="row">
+
+				<h3>MARJORIE P HART ELEMENTARY</h3>
+
+			</div>
+			
+				<div class="iframe">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2884810463984!2d-87.6481592851334!3d41.92965207016656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1507558034995" allowfullscreen></iframe>
+				</div>
+
+
+		</div>
+	</div>
+	<div class="container-maps" id="north" style="display: none">
+
+		<nav class="navbar navbar-inverse">
+			<div class="row" id="bottomNav">
+				<div class="col-xs-2 text-center"><span><a href="#" data-rel="locations" class="link-bottom"><i class="glyphicon glyphicon-chevron-left"></i><br>Back</a></span></div>
+				<div class="col-xs-8">
+					<p class="white">MAPS</p>
+				</div>
+				<div class="col-xs-2"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+			</div>
+
+
+		</nav>
+		<div class="container-map-detail">
+			<div class="row_logo">
+				<img src="assets/images/nysl_logo.png" class="img_logo">
+			</div>
+			<div class="row">
+
+				<h3>NORTH ELEMENTARY</h3>
+
+			</div>
+			<div class="iframe">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3362420772887!2d-87.6483583851342!3d41.90712997157703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af13a8945%3A0xb6ad1ec2b6f379ba!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1507558060263" allowfullscreen></iframe>
+
+			</div>
+
+		</div>
+	</div>
+	<div class="container-maps" id="south" style="display: none">
+
+		<nav class="navbar navbar-inverse">
+			<div class="row" id="bottomNav">
+				<div class="col-xs-2 text-center"><span><a href="#" data-rel="locations" class="link-bottom"><i class="glyphicon glyphicon-chevron-left"></i><br>Back</a></span></div>
+				<div class="col-xs-8">
+					<p class="white">MAPS</p>
+				</div>
+				<div class="col-xs-2"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+			</div>
+
+
+		</nav>
+		<div class="container-map-detail">
+			<div class="row_logo">
+				<img src="assets/images/nysl_logo.png" class="img_logo">
+			</div>
+			<div class="row">
+
+				<h3>SOUTH ELEMENTARY</h3>
+
+			</div>
+			<div class="iframe">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.7489558078896!2d-87.65354528513373!3d41.91975517078637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1507558089068" allowfullscreen></iframe>
+			</div>
+
+		</div>
+	</div>
+	<div class="container-maps" id="game-detail" style="display: none">
+
+		<nav class="navbar navbar-inverse">
+			<div class="row" id="bottomNav">
+				<div class="col-xs-2 text-center"><span><a href="#" data-rel="game-info" class="link-bottom"><i class="glyphicon glyphicon-chevron-left"></i><br>Back</a></span></div>
+				<div class="col-xs-8">
+					<p class="white">GAME DETAIL</p>
+				</div>
+				<div class="col-xs-2"><span class="pull-right"><img src="assets/images/nysl_logo.png" class="header-logo"></span></div>
+			</div>
+
+
+		</nav>
+		<div class="container-map-detail">
+			<div class="row contentCenter">
+				<img src="assets/images/nysl_logo.png" class="team-detail">
+			</div>
+			<hr class="hr-grey">
+			<div class="row contentCenter">
+				<div class="col-sm-4" id="team-1">
+				</div>
+				<div class="col-sm-6 black-column">
+					<span class="vs">VS</span><br>
+					<span class="day" id="day-match"></span>
+					<span class="time" id="time-match"></span>
+				</div>
+				<div class="col-sm-4" id="team-2">	
+				</div>
+			
+			</div>
+			<hr class="hr-grey">
+			<div class="row contentCenter" id="game-location">
+			</div>
+			<div class="iframe" id="location-iframe">
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-inverse navbar-fixed-bottom" id="bottomm-bar" style="display: none">
+		<div class="row" id="bottomNav">
+			<div class="col-xs-4 text-center"><a href="#" class="link-bottom" data-rel="main-page"><i class="glyphicon glyphicon-home"></i><br>Home</a></div>
+			<div class="col-xs-4 text-center"><a href="#" class="link-bottom" data-rel="locations"><i class="glyphicon glyphicon-map-marker"></i><br>Locations</a></div>
+			<div class="col-xs-4 text-center"><a href="#" class="link-bottom" data-rel="chat"><i class="glyphicon glyphicon-comment"></i><br>Chat</a></div>
+			<div class="col-xs-4 text-center"><a href="mailto:michael.randall@chisoccer.org" target="_top"><i class="glyphicon glyphicon-envelope"></i><br>Contact</a></div>
+		</div>
+
+	</nav>
+	<script type="text/javascript" src="assets/javascript/main.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyByBZ6hNpDJMYg0BR6-TEclpqE_Z9uC48c",
+			authDomain: "nysl-mobile-9aa20.firebaseapp.com",
+			databaseURL: "https://nysl-mobile-9aa20.firebaseio.com",
+			projectId: "nysl-mobile-9aa20",
+			storageBucket: "",
+			messagingSenderId: "601801689016"
+		};
+		firebase.initializeApp(config);
+	</script>
+</body>
+
+</html>
